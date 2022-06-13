@@ -1,0 +1,54 @@
+import java.util.*;
+
+/**
+ * public class Tree {
+ *   int val;
+ *   Tree left;
+ *   Tree right;
+ * }
+ */
+class Solution {
+    class Pair {
+        int op = 0;
+        int ep = 0;
+    }
+
+    int mep = 0;
+
+    public int solve(Tree root) {
+        mep = 0;
+        helper(root);
+        return mep;
+    }
+
+    public Pair helper(Tree node){
+        if(node == null){
+            return new Pair();
+        }
+
+        Pair lp = helper(node.left);
+        Pair rp = helper(node.right);
+
+        int f1 = Math.max(lp.ep, rp.ep);
+        int f2 = Math.max(lp.op, rp.op);
+
+        Pair mp = new Pair();
+        if(node.val % 2 == 0){
+            mp.ep = f1 + 1;
+            mp.op = f2 == 0? 0: f2 + 1;
+
+            int f3 = Math.max(lp.ep + rp.ep, lp.op + rp.op);
+            mep = Math.max(mep, f3 + 1);
+        } else {
+            mp.ep = f2 == 0? 0: f2 + 1;
+            mp.op = f1 + 1;
+
+            int f3 = Math.max(lp.ep + rp.op, lp.op + rp.ep);
+            mep = Math.max(mep, f3 == 0? 0: f3 + 1);
+        }
+
+        return mp;
+    }
+
+
+}
