@@ -1,0 +1,29 @@
+class Solution {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        TreeNode retVal = buildTreeRec(inorder, postorder, 0, postorder.length - 1, 0, inorder.length - 1);
+        return retVal;
+    }
+    
+    public TreeNode buildTreeRec(int[] inorder, int[] postorder, int postlo, int posthi, int inlo, int inhi){
+        if(inlo > inhi || postlo > posthi){
+            return null;
+        }
+        
+        int inidx = -1;
+        for(int i = inlo; i <= inhi; i++){
+            if(inorder[i] == postorder[posthi]){
+                inidx = i;
+                break;
+            }
+        }
+        
+        int count = inhi - inidx;
+        
+        TreeNode retVal = new TreeNode();
+        retVal.val = postorder[posthi];
+        retVal.left = buildTreeRec(inorder, postorder, postlo, posthi - count - 1, inlo, inidx - 1);
+        retVal.right = buildTreeRec(inorder, postorder, posthi - count, posthi - 1, inidx + 1, inhi);
+        
+        return retVal;
+    }
+}

@@ -1,0 +1,42 @@
+class Solution {
+    public int[] sumOfDistancesInTree(int n, int[][] edges) {
+        HashSet<Integer>[] graph = new HashSet[n];
+        for(int i = 0; i < n; i++){
+            graph[i] = new HashSet<>();
+        }
+
+        for(int i = 0; i < edges.length; i++){
+            graph[edges[i][0]].add(edges[i][1]);
+            graph[edges[i][1]].add(edges[i][0]);
+        }
+
+        int[] count = new int[n];
+        int[] res = new int[n];
+
+        helper1(graph, count, res, 0, -1);
+        helper2(graph, count, res, 0, -1);
+        
+        return res;
+    }
+
+    public void helper1(HashSet<Integer>[] graph, int[] count, int[] res, int s, int p){
+        for(int nbr: graph[s]){
+            if(nbr != p){
+                helper1(graph, count, res, nbr, s);
+                count[s] += count[nbr];
+                res[s] += res[nbr] + count[nbr];
+            }
+        }
+
+        count[s]++;
+    }
+
+    public void helper2(HashSet<Integer>[] graph, int[] count, int[] res, int s, int p){
+        for(int nbr: graph[s]){
+            if(nbr != p){
+                res[nbr] = res[s] + count.length - count[nbr] - count[nbr];
+                helper2(graph, count, res, nbr, s);
+            }
+        }
+    }
+}

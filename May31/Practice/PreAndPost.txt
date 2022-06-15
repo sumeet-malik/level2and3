@@ -1,0 +1,34 @@
+class Solution {
+    public TreeNode constructFromPrePost(int[] preorder, int[] postorder) {
+        TreeNode root = helper(preorder, postorder, 0, postorder.length - 1);
+        return root;
+    }
+
+    public TreeNode helper(int[] pre, int[] post, int low, int high){
+        if(low > high){
+            return null;
+        }
+
+        TreeNode node = new TreeNode(pre[idx]);
+        idx++;
+
+        if(idx == pre.length){
+            return null;
+        }
+
+        int search = -1;
+        for(int i = low; i <= high; i++){
+            if(post[i] == pre[idx]){
+                search = i;
+                break;
+            }
+        }
+
+        if(search != -1){
+            node.left = helper(pre, post, low, search);
+            node.right = helper(pre, post, search + 1, high - 1);
+        }
+
+        return node;
+    }
+}

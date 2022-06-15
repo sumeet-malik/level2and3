@@ -1,0 +1,93 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Codec {
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        if(root == null){
+            return "";
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        helperSer(root,  sb);
+        return sb.toString().trim();
+    }
+    
+    public void helperSer(TreeNode node, StringBuilder sb){
+        if(node == null){
+            sb.append(".");
+            sb.append(" ");
+            return;
+        }
+        
+        sb.append(node.val);
+        sb.append(" ");
+        
+        helperSer(node.left, sb);
+        helperSer(node.right, sb);
+    }
+    
+    class Pair {
+        TreeNode node;
+        int state = 0;
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        if(data.length() == 0){
+            return null;
+        }
+        
+        String[] darray = data.split(" ");
+        int idx = 0;
+        
+        Stack<Pair> st = new Stack<>();
+        Pair rootp = new Pair();
+        rootp.node = new TreeNode(Integer.parseInt(darray[idx]));
+        st.push(rootp);
+        
+        while(st.size() > 0){
+            Pair top = st.peek();
+            
+            if(top.state == 0){
+                idx++;
+                top.state++;
+                
+                if(!darray[idx].equals(".")){
+                  Pair leftp = new Pair();
+                  leftp.node = new TreeNode(Integer.parseInt(darray[idx]));  
+                  top.node.left = leftp.node;
+                    
+                  st.push(leftp);
+                } 
+            } else if(top.state == 1){
+                idx++;
+                top.state++;
+
+                if(!darray[idx].equals(".")){
+                    Pair rightp = new Pair();
+                    rightp.node = new TreeNode(Integer.parseInt(darray[idx]));  
+                    top.node.right = rightp.node;
+
+                    st.push(rightp);
+                } 
+            } else {
+                st.pop();
+            }
+        }
+        
+        
+        return rootp.node;
+    }
+}
+
+// Your Codec object will be instantiated and called as such:
+// Codec ser = new Codec();
+// Codec deser = new Codec();
+// TreeNode ans = deser.deserialize(ser.serialize(root));

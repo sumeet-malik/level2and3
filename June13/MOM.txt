@@ -15,11 +15,18 @@ Graphs
     https://leetcode.com/problems/number-of-enclaves/
     https://leetcode.com/problems/rotting-oranges/
     https://leetcode.com/problems/is-graph-bipartite/
+    https://leetcode.com/problems/number-of-distinct-islands/
+    https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/
+    leetcode 787
+    leetcode 797
+    leetcode 1932
+    https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118511/offering/1381552
 Trees
     https://binarysearch.com/problems/Longest-Even-Sum-Path
 
-    https://leetcode.com/problems/bus-routes/
-    https://leetcode.com/problems/number-of-distinct-islands/
+
+https://leetcode.com/problemset/concurrency/
+    
 
 
 

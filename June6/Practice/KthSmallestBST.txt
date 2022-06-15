@@ -1,0 +1,39 @@
+class Solution {
+    // Return the Kth smallest element in the given BST
+    public int KthSmallestElement(Node root, int K) {
+        // Write your code here
+        Node curr = root;
+        int count = 0;
+        
+        while(curr != null){
+            if(curr.left == null){
+                count++;
+                if(count == K){
+                    return curr.data;
+                }
+                
+                curr = curr.right;
+            } else {
+                Node iop = curr.left;
+                while(iop.right != null && iop.right != curr){
+                    iop = iop.right;
+                }
+                
+                if(iop.right == null){
+                    iop.right = curr; // making the thread
+                    curr = curr.left;
+                } else {
+                    iop.right = null;
+                    
+                    count++;
+                    if(count == K){
+                        return curr.data;
+                    }
+                    curr = curr.right;
+                }
+            }
+        }
+        
+        return -1;
+    }
+}

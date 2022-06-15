@@ -1,0 +1,34 @@
+ ArrayList<Integer> leftView(Node root)
+    {
+      ArrayList<Integer> retVal = new ArrayList<>();
+      
+      if(root == null){
+          return retVal;
+      }
+
+      Queue<Node> queue = new LinkedList<>();
+      queue.add(root);
+
+      while(queue.size() > 0){
+          int lsize = queue.size();
+
+          for(int i = 0; i < lsize; i++){
+              Node temp = queue.remove();
+
+              if(i == 0){
+                  retVal.add(temp.data);
+              }
+
+              if(temp.left != null){
+                  queue.add(temp.left);
+              }
+
+              if(temp.right != null){
+                  queue.add(temp.right);
+              }
+          }
+      }
+     
+      
+      return retVal;
+    }

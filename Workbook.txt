@@ -1,0 +1,15 @@
+Where not to focus -> past, others
+Where to focus -> Learning
+
+Admin Work
+    Access
+    Batch Changes
+    Certis
+    Recordings
+    Admissions
+    Refunds
+
+Learning
+    DSA class
+    HLD, LLD, DBMS, OS, CN
+    Web, Mobile, Cloud, ML, AR-VR, BlockChain

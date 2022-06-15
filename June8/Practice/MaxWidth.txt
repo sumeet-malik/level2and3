@@ -1,0 +1,42 @@
+class Solution {
+    class Pair {
+        long min;
+        long max;
+    }
+    
+    long maxw = 0;
+    
+    public int widthOfBinaryTree(TreeNode root) {
+        HashMap<Integer, Pair> map = new HashMap<>();
+        maxw = 0;
+        helper(root, 0, 1, map);
+        return (int)maxw;
+    }
+    
+    public void helper(TreeNode node, int level, long idx, HashMap<Integer, Pair> map){
+        if(node == null){
+            return;
+        }
+        
+        helper(node.left, level + 1, idx * 2, map);
+        helper(node.right, level + 1, idx * 2 + 1, map);
+        
+        Pair p = null;
+        
+        if(map.containsKey(level)){
+            p = map.get(level);
+            p.min = Math.min(p.min, idx);
+            p.max = Math.max(p.max, idx);
+        } else {
+            p = new Pair();
+            p.min = idx;
+            p.max = idx;
+            map.put(level, p);
+        }
+        
+        long width = p.max - p.min + 1;
+        maxw = Math.max(maxw, width);
+    }
+    
+    
+}

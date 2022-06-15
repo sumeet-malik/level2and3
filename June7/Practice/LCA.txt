@@ -1,0 +1,44 @@
+class Solution
+{
+    boolean n1flag = false;
+    boolean n2flag = false;
+    //Function to return the lowest common ancestor in a Binary Tree.
+	Node lca(Node root, int n1,int n2)
+	{
+		n1flag = false;
+		n2flag = false;
+		
+		Node lca = helper(root, n1, n2);
+		
+		if(n1flag && n2flag){
+		    return lca;
+		} else {
+		    return null;
+		}
+	}
+	
+	public Node helper(Node node, int n1, int n2){
+	    if(node == null){	
+	        return null;
+	    }
+	    
+	    Node left = helper(node.left, n1, n2);
+	    Node right = helper(node.right, n1, n2);
+	    
+	    if(node.data == n1){
+	        n1flag = true;
+	        return node;
+	    } else if(node.data == n2){
+	        n2flag = true;
+	        return node;
+	    } else if(left != null && right != null){
+	        return node;
+	    } else if(left!= null){
+	        return left;
+	    } else if(right != null){
+	        return right;
+	    } else {
+	        return null;
+	    }
+	}
+}

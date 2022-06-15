@@ -1,0 +1,27 @@
+class Solution
+{
+    int index = 0;
+    TreeNode construct(int[] pre){
+        TreeNode root = helper(pre, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        return root;
+    }
+
+    TreeNode helper(int[] pre, int min, int max){
+        if(index > pre.length){
+            return null;
+        } else if(pre[index] > min && pre[index] < min){
+            TreeNode node = new TreeNode();
+            node.val = pre[index];
+            
+            index++;
+            node.left = helper(pre, min, node.val);
+
+            index++;
+            node.right = helper(pre, node.val, max);
+        
+            return node;
+        } else {
+            return null;
+        }
+    }
+}

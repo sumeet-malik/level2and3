@@ -1,0 +1,36 @@
+class Solution {
+    public TreeNode deleteNode(TreeNode root, int key) {
+        if(root == null){
+            return null;
+        }
+        
+        if(key > root.val){
+            root.right = deleteNode(root.right, key);
+            return root;
+        } else if(key < root.val){
+            root.left =  deleteNode(root.left, key);
+            return root;
+        } else {
+            if(root.left == null && root.right == null){
+                return null;
+            } else if(root.left == null){
+                return root.right;
+            } else if(root.right == null){
+                return root.left;
+            } else {
+                int lmax = max(root.left);
+                root.val = lmax;
+                root.left = deleteNode(root.left, lmax);
+                return root;
+            }
+        }
+    }
+    
+    public int max(TreeNode node){
+        if(node.right == null){
+            return node.val;
+        } else {
+            return max(node.right);
+        }
+    }
+}
