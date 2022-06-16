@@ -1,0 +1,39 @@
+More Trees
+    https://www.spoj.com/problems/FENTREE/
+    https://leetcode.com/problems/kth-ancestor-of-a-tree-node/
+    https://codeforces.com/gym/304970/problem/A
+    https://codeforces.com/contest/1534/problem/D
+    https://www.geeksforgeeks.org/in-place-conversion-of-sorted-dll-to-balanced-bst/
+    https://www.geeksforgeeks.org/merge-two-balanced-binary-search-trees/
+    leetcode 1932 = https://leetcode.com/problems/merge-bsts-to-create-single-bst/
+    https://leetcode.com/problems/binary-search-tree-iterator-ii/
+    https://www.lintcode.com/problem/921/
+    https://www.geeksforgeeks.org/check-if-value-exists-in-level-order-sorted-complete-binary-tree/
+
+Requests
+    https://www.hackerrank.com/challenges/journey-to-the-moon/problem
+    leetcode 1723 = https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/
+    leetcode 787 = https://leetcode.com/problems/cheapest-flights-within-k-stops/
+    leetcode 797 = https://leetcode.com/problems/all-paths-from-source-to-target/
+    https://leetcode.com/discuss/interview-question/2147676/sorting-the-tree
+    https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118511/offering/1381552
+    https://leetcode.com/problemset/concurrency/
+    https://www.lintcode.com/problem/804/description
+    
+
+June 14
+    Graphs -> https://leetcode.com/problems/01-matrix/submissions/
+    Graphs -> https://leetcode.com/problems/as-far-from-land-as-possible/
+    Graphs -> Djikstra = https://pepcoding.com/resources/online-java-foundation/graphs/shortest-path-in-weights-official/ojquestion
+    Graphs -> https://leetcode.com/problems/swim-in-rising-water/
+    Graphs -> Prims = https://pepcoding.com/resources/online-java-foundation/graphs/minimum-wire-to-connect-all-pcs-official/ojquestion
+    Graphs -> https://www.geeksforgeeks.org/minimum-cost-connect-cities/
+    Trees -> https://binarysearch.com/problems/Longest-Even-Sum-Path
+
+Trees Test = Friday
+
+
+
+
+
+
