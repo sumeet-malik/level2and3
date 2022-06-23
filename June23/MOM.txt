@@ -1,0 +1,50 @@
+More Trees
+    https://www.spoj.com/problems/FENTREE/
+    https://leetcode.com/problems/kth-ancestor-of-a-tree-node/
+    https://codeforces.com/gym/304970/problem/A
+    https://codeforces.com/contest/1534/problem/D
+    https://www.geeksforgeeks.org/in-place-conversion-of-sorted-dll-to-balanced-bst/
+    https://www.geeksforgeeks.org/merge-two-balanced-binary-search-trees/
+    leetcode 1932 = https://leetcode.com/problems/merge-bsts-to-create-single-bst/
+    https://leetcode.com/problems/binary-search-tree-iterator-ii/
+    https://www.lintcode.com/problem/921/
+    https://www.geeksforgeeks.org/check-if-value-exists-in-level-order-sorted-complete-binary-tree/
+
+Requests
+    leetcode 1723 = https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/
+    leetcode 787 = https://leetcode.com/problems/cheapest-flights-within-k-stops/
+    leetcode 797 = https://leetcode.com/problems/all-paths-from-source-to-target/
+    Leetcode 630 = 
+    https://leetcode.com/discuss/interview-question/2147676/sorting-the-tree
+    https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118511/offering/1381552
+    https://leetcode.com/problemset/concurrency/
+    https://www.lintcode.com/problem/804/description
+
+    https://leetcode.com/problems/pacific-atlantic-water-flow/
+    https://www.lintcode.com/problem/178/
+    https://leetcode.com/problems/escape-the-spreading-fire/
+
+
+June 20
+    Graphs -> https://leetcode.com/problems/redundant-connection/
+    Graphs -> https://leetcode.com/problems/regions-cut-by-slashes/
+    Graphs -> https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/graphs/sentence_similarity_official/ojquestion
+    Graphs -> https://leetcode.com/problems/satisfiability-of-equality-equations/
+    Graphs -> https://leetcode.com/problems/evaluate-division/
+
+    Graphs -> https://leetcode.com/problems/redundant-connection-ii/
+
+    Graphs -> https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/
+    Graphs -> https://www.hackerrank.com/challenges/journey-to-the-moon/problem
+    Trees -> https://binarysearch.com/problems/Longest-Even-Sum-Path
+
+Confirm?
+    Prims vs kruskals
+    KAHN's directed cycle
+
+
+
+
+
+
+
