@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+class Main {
+  
+  static class BankAccount {
+      int anum;
+      int money;
+      static int roi;
+
+      void announce(){
+        System.out.println(this.anum + ", " + this.money + ", " + this.roi);
+      }
+  }
+  
+  
+    
+  public static void main(String[] args) throws NumberFormatException, IOException {
+      BankAccount a1 = new BankAccount();
+      a1.anum = 10;
+      a1.money = 100;
+      a1.roi = 4;
+
+      a1.announce();
+
+      BankAccount a2 = new BankAccount();
+      a2.anum = 11;
+      a2.money = 110;
+      a2.roi = 5;
+    
+      a2.announce();
+      a1.announce();
+  }
+
+
+}
