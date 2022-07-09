@@ -1,0 +1,42 @@
+Object creation - steps, this, this chaining
+        Space allocation - java Defaults
+        Parsing - Non-dynamic Class creator Defaults
+        Default ctor - Dynamic class creator Defaults
+        Parametrized ctor - Class user given values
+Inheritance & Polymorphism
+    P and C - all cases, except abstract fns and class
+    final - variable, data member, fn, class
+    abstract - fn & abstract class
+    super, ctor chaining
+    interface
+    interface vs abstract class
+----------------------------------------------------------------
+Object creation
+    1. Space allocation & this assignment
+        Space is allocated for all non-static data members. this is set equal to the new object's address
+        Data members are assigned default values (JAVA)
+            0 = byte, short, int, long
+            0.0 = float, double
+            false = boolean
+            '\0' = char
+            null = everything else
+    2. Parsing
+        Class creator's default values are assigned to data members (but only such values which are non-dynamic)
+        e.g. growth multiple is set to 1.5 in ArrayList
+        e.g. rehashing threshold is set in HashMap to 0.5
+    3. Constructor
+        3.1 Default = Class creator's default values are assigned to data members (but only such values which are dynamic such as student folder or dbconnection)
+        3.2 Parametrized = For class user to set values which he requires
+        3.3 If no constructor is provided, Java adds the default ctor by itself
+        3.4 If class creator, provides a Parametrized ctor (then Java won't add default ctor)
+Inheritance & Polymorphism
+    P and C - all cases
+    Rules
+        1. Compiler (LHS, Reference) compiles
+        2. JRE (RHS, instance) and runs functions
+        3. Conflict resolved by Reference
+    1. P ref, P inst
+    2. C ref, C inst
+    3. P ref, C inst  (1 and 3 are polymorphic examples, function overriding)
+    4. C ref, P inst => not allowed
+    
