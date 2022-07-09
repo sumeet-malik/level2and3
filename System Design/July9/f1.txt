@@ -37,6 +37,11 @@ class Main {
         this.age = age;
         this.name = name;
     }
+
+    Student(Student s){
+      this.age = s.age;
+      this.name = s.name;
+    }
     
   }
 

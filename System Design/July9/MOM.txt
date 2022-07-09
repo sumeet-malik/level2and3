@@ -39,4 +39,8 @@ Inheritance & Polymorphism
     2. C ref, C inst
     3. P ref, C inst  (1 and 3 are polymorphic examples, function overriding)
     4. C ref, P inst => not allowed
+    5. Run-time polymorphism -> calling fun in case 1 and 3 (fn overriding)
+    6. Compile-time polymorphism -> Arrays.sort multiple (fn overloading)
+
+    
     
