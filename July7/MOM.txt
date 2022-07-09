@@ -1,0 +1,64 @@
+More Trees
+    https://www.spoj.com/problems/FENTREE/
+    https://leetcode.com/problems/kth-ancestor-of-a-tree-node/
+    https://codeforces.com/gym/304970/problem/A
+    https://codeforces.com/contest/1534/problem/D
+    https://www.geeksforgeeks.org/in-place-conversion-of-sorted-dll-to-balanced-bst/
+    https://www.geeksforgeeks.org/merge-two-balanced-binary-search-trees/
+    leetcode 1932 = https://leetcode.com/problems/merge-bsts-to-create-single-bst/
+    https://leetcode.com/problems/binary-search-tree-iterator-ii/
+    https://www.lintcode.com/problem/921/
+    https://www.geeksforgeeks.org/check-if-value-exists-in-level-order-sorted-complete-binary-tree/
+
+Requests
+    leetcode 1723 = https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/
+    leetcode 787 = https://leetcode.com/problems/cheapest-flights-within-k-stops/
+    leetcode 797 = https://leetcode.com/problems/all-paths-from-source-to-target/
+    Leetcode 630 = 
+    https://leetcode.com/discuss/interview-question/2147676/sorting-the-tree
+    https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118511/offering/1381552
+    https://leetcode.com/problemset/concurrency/
+    https://www.lintcode.com/problem/804/description
+
+    https://leetcode.com/problems/pacific-atlantic-water-flow/
+    https://www.lintcode.com/problem/178/
+    https://leetcode.com/problems/escape-the-spreading-fire/
+    https://leetcode.com/problems/parallel-courses-ii/
+    https://leetcode.com/contest/weekly-contest-299/problems/minimum-score-after-removals-on-a-tree/
+    
+    https://practice.geeksforgeeks.org/contest/job-a-thon-10-hiring-challenge/problems/
+    https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/
+
+    
+    https://binarysearch.com/problems/Minimum-Spanning-Tree
+    https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/
+    https://workat.tech/machine-coding/editorial/how-to-design-splitwise-machine-coding-ayvnfo1tfst6
+    https://leetcode.com/problems/minimum-height-trees 
+
+
+June 20
+    Graphs -> https://leetcode.com/problems/cracking-the-safe/        
+    Graphs -> https://leetcode.com/problems/cheapest-flights-within-k-stops/
+    Graphs -> https://practice.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1/
+    Graphs -> https://leetcode.com/problems/bricks-falling-when-hit/
+    Graphs -> https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/
+    
+    Graphs -> https://leetcode.com/problems/maximum-profit-in-job-scheduling/
+    Graphs -> https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/
+    Graphs -> https://leetcode.com/problems/graph-connectivity-with-threshold/
+    Graphs -> https://codeforces.com/contest/1541/problem/C
+    Graphs -> https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/
+    Graphs -> https://practice.geeksforgeeks.org/problems/find-the-maximum-flow2126/1
+    Graphs -> https://practice.geeksforgeeks.org/problems/maximum-bipartite-matching/1
+    Graphs -> https://practice.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1
+    Graphs -> https://leetcode.com/problems/shortest-distance-from-all-buildings/
+    Graphs -> https://www.geeksforgeeks.org/shortest-cycle-in-an-undirected-unweighted-graph/
+    Trees -> https://binarysearch.com/problems/Longest-Even-Sum-Path
+
+
+
+
+
+
+
+
