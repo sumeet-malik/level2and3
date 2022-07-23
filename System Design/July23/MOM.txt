@@ -1,0 +1,30 @@
+1. comparable vs comparator
+2. iterable vs iterator
+3. Object -> toString, equals, hashcode
+4. Integer vs int, Integer[] vs int[]
+5. Lambda functions
+
+notes
+-> List of Integer, String, Boolean, double, float char can be sorted because these can be compared to each other
+-> PriorityQueue of Integer, String, Boolean, double, float, char will work because these can be compared to each other
+-> Sort (Collections.sort / Arrays.sort or PriorityQueue or TreeSet or TreeMap) won't work for normal classes
+-> Error = can't typecast <current class> to comparable
+-> What is comparable?
+-> comparable is an interface?
+    -> What is an interface?
+    -> Interface is a contract of fns, which any class that implements the interface has to honor (the contract)
+    -> Class implementing the interface has to provide body of fns
+-> What does comparable interface contain?
+    -> only one fn -> int compareTo(T o)
+-> How is comparable interface special
+    -> it is java's designated interface meant to implement comparisons
+    -> Used by any java code which uses comparisons
+        -> PriorityQueue, TreeMap, TreeSet, Arrays.sort, Collections.sort, Collections.min, Collections.max
+-> How to implement comparable?
+    -> write the body of int compareTo(T other) fn
+        -> if you think, this < other, return -ve values
+        -> if you think, this == other, return 0
+        -> if you think, this > other, return +ve
+-> Increasing = this.p - other.p
+-> Decreasing = other.p - this.p
+-> Multiple parameters e.g. sort l1 of cars on speed and l2 of cars on price
