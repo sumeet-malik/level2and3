@@ -1,0 +1,46 @@
+1. Final 
+    variable = = values can't be reassigned
+    data member = values can't be reassigned (either assign in parsing or constructor / static block)
+    fn = Can't override the fn in derived class (overloading is allowed in same class and derived class)
+    class = can't derive the final class
+2. Abstract
+    class = can't make an object of abstract class (for instance Employee class derived into HREmployee or Software Employee. Employee class should be abstracrt, because not a type in itself, just created to absorb common functions of HREmployee and SoftwareEmployee)
+    fn = fn which doesn't have code (only API)
+    implications
+        Why required? -> To absorb common code of deriving Classes
+        If fn is abstract, will the containing class be necessarily abstract? Yes
+        If class is abstract, will it necessarily have abstract functions? No
+3. interface
+    -> When all fns are abstract and there are no common instance data members to share
+    -> Similar to abstract classes
+    -> An extreme version of abstract classes
+        -> when all fns are abstract
+        -> no common instance data members
+    -> If a class implements an interface but doesn't provide body for all functions, then it will become abstract
+    -> Can we make an object of interface? No
+    -> Can an interface provide body for any function? Yes, since Java8, using the default keyword it is possible (although advised to not use). Java provided for this backword compatibility. Not to be used often.
+    -> Can an interface have data members? Yes, but not as instance data members, can be used as static data members
+4. abstract class vs interface (4:32 to 4:42 for notes)
+    -> Abstract classes can have implementations for some functions, interfaces are supposed to have all functions with no implementations
+    -> Abstract classes can have instance data members, interfaces can only have static data members
+    -> A class can't derive two abstract classes, but can implement any number of interfaces
+    -> Interface data members are final and static
+5. comparable vs comparator
+6. iterable vs iterator
+7. Object -> toString, equals, hashcode
+8. Integer vs int, Integer[] vs int[]
+9. Lambda functions
+
+Questions
+    Q1. What is final variable?
+    Q2. What is final data member?
+    Q3. When are they initialized?
+    Q4. What is final fn? -> Can't override them in derived class
+    Q5. What is a final class? -> Can't derive the final class
+    Q6. What is abstract class? -> Can't make object
+    Q7. What is abstract fn? -> A fn with no body.
+    Q8. Can an abstract class have 0 abstract fns? -> Yes
+    Q9. Can a class having abstract fns be market non-abstract? -> False. Have to mark the class abstract or provide implementations for all abstract fns
+    Q10. Ctor in abstract class? -> allowed
+    Q11. Why abstract fn? -> TO enforce the deriving classes to provide implementations
+    Q12. Why abstract class? -> To represent the common concept and absorb common functionality or data memebrs?

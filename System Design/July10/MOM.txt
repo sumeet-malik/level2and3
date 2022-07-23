@@ -1,0 +1,13 @@
+1. Final 
+    variable = = values can't be reassigned
+    data member = values can't be reassigned (either assign in parsing or constructor / static block)
+    fn = Can't override the fn in derived class (overloading is allowed in same class and derived class)
+    class = 
+2. Abstract - class, fn, implications
+3. interface
+4. abstract class vs interface
+5. comparable vs comparator
+6. iterable vs iterator
+7. Object -> toString, equals, hashcode
+8. Integer vs int, Integer[] vs int[]
+9. Lambda functions
