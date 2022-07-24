@@ -1,0 +1,14 @@
+1. iterable vs iterator
+2. Object -> toString, equals, hashcode
+3. Integer vs int, Integer[] vs int[]
+4. Lambda functions
+5. Access Modifiers
+
+notes
+    Iterator Design Pattern - For looping across all items of a collection of data, without changing the collection
+    Implemented via two interfaces - iterator and iterable interface, and a syntactical sugar of foreach loop (for(int val: list))
+    -> LinkedList Iterator
+    -> Generic Tree Iterator
+        https://pepcoding.com/resources/online-java-foundation/generic-tree/ (last two videos watch them)
+    -> https://leetcode.com/problems/flatten-nested-list-iterator/
+    -> blackwasp.co.uk (DP)
