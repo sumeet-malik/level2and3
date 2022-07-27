@@ -1,0 +1,26 @@
+class Solution {
+    ArrayList<Integer> primeRange(int M, int N) {
+        boolean[] primes = new boolean[N + 1];
+        
+        primes[0] = true;
+        primes[1] = true;
+        for(int div = 2; div * div <= N; div++){
+            if(primes[div] == true){
+                continue;
+            }
+            
+            for(int m = div; div * m <= N; m++){
+                primes[div * m] = true;
+            }
+        }
+        
+        ArrayList<Integer> res = new ArrayList<>();
+        for(int i = M; i <= N; i++){
+            if(primes[i] == false){
+                res.add(i);
+            }
+        }
+        
+        return res;
+    }
+}
