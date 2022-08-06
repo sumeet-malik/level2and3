@@ -1,0 +1,28 @@
+-> Design Patterns
+    -> Adaptor
+    -> Singleton
+    -> Observor
+
+-> Integer vs int, Integer[] vs int[]
+-> Lambda functions
+-> Access Modifiers
+--------------------------------------------------------
+Notes
+    Adapter
+    -> There is an already existing data provider which provides data in format1
+    -> There is an already existing data consumer which expects data in format2
+    -> format1 != format2
+    -> We have to write an adapter which converts between the two formats
+    -> Consumer will call the adapter
+    -> Adapter will call the provider and get data in format1
+    -> Adapter will convert data from format1 to format2
+    -> Consumer will get data in format2 from the adapter
+    -> Real life usage
+        -> Let us say we want weather API data and we found a weather API
+        -> Our code is expecting data in JSON format
+        -> Weather API is returning data in XML format
+        -> We will have to write an adapter on the API. The Adapter will call API and get data in XML format and convert it to JSON for use by our code.
+        
+
+
+
