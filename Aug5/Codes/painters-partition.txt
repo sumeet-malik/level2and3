@@ -1,0 +1,37 @@
+
+ class Solution{
+    static long minTime(int[] arr,int n,int k){
+        //code here
+        long lta = Long.MIN_VALUE;
+        long hta = 0;
+        for(int val: arr){
+            hta += val;
+            lta = Math.max(val, lta);
+        }
+        
+        while(lta < hta){
+            long ta = (lta + hta) / 2;
+            
+            int paintersReqd = 1;
+            int currPainterWork = 0;
+            for(int val: arr){
+                if(currPainterWork + val <= ta){
+                    currPainterWork += val;
+                } else {
+                    paintersReqd++;
+                    currPainterWork = val;
+                }
+            }
+            
+            if(paintersReqd > k){
+                lta = ta + 1;
+            } else {
+                hta = ta;
+            }
+        }
+        
+        return lta;
+    }
+}
+
+

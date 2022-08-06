@@ -1,0 +1,37 @@
+class Solution {
+    public int shipWithinDays(int[] weights, int days) {
+        int lo = Integer.MIN_VALUE;
+        int hi = 0;
+        
+        for(int w: weights){
+            if(w > lo){
+                lo = w;
+            }
+            hi += w;
+        }
+        
+        while(lo < hi){
+            int mid = (lo + hi) / 2;
+            int cap = mid;
+            
+            int reqd = 1;
+            int sum = 0;
+            for(int w: weights){
+                if(sum + w <= cap){
+                    sum = sum + w;
+                } else {
+                    sum = w;
+                    reqd++;
+                }
+            }
+            
+            if(reqd > days){
+                lo = mid + 1;
+            } else {
+                hi = mid;
+            }
+        }
+        
+        return lo;
+    }
+}

@@ -1,0 +1,39 @@
+public class Solution {
+    public int paint(int A, int B, ArrayList<Integer> C) {
+        long lo = Long.MIN_VALUE;
+        long hi = 0;
+        for(int c: C){
+            long time = 1L * c * B;
+            hi += time;
+            
+            if(time > lo){
+                lo = time;
+            }
+        }
+        
+        while(lo < hi){
+            long mid = lo + (hi - lo) / 2;
+            long allowedTime = mid;
+            
+            int reqd = 1;
+            long time = 0;
+            for(int c: C){
+                long ctime = 1L * c * B;
+                if(time + ctime <= allowedTime){
+                    time += ctime;
+                } else {
+                    time = ctime;
+                    reqd++;
+                }
+            }
+            
+            if(reqd > A){
+                lo = mid + 1;
+            } else {
+                hi = mid;
+            }
+        }
+        
+        return (int)(lo % 10000003);
+    }
+}
