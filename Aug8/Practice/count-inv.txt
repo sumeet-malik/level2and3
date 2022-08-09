@@ -1,0 +1,65 @@
+class Solution
+{
+    // arr[]: Input Array
+    // N : Size of the Array arr[]
+    //Function to count inversions in the array.
+    static long ans = 0;
+    static long inversionCount(long arr[], long N)
+    {
+        // Your Code Here
+        ans = 0;
+        mergeSort(arr, 0, arr.length - 1);
+        return ans;
+    }
+    
+    static long[] mergeSort(long[] arr, int lo, int hi){
+        if(lo == hi){
+            long[] barr = new long[1];
+            barr[0] = arr[(int)lo];
+            return barr;
+        }
+        
+        int mid = (lo + hi) / 2;
+        
+        long[] sfhalf = mergeSort(arr, lo, mid);
+        long[] sshalf = mergeSort(arr, mid + 1, hi);
+        long[] sarr = mergeTwoSortedArrays(sfhalf, sshalf);
+        return sarr;
+    }
+    
+    static long[] mergeTwoSortedArrays(long[] one, long[] two){
+        long[] res = new long[one.length  + two.length];
+        
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        
+        while(i < one.length && j < two.length){
+            if(one[i] <= two[j]){
+                res[k] = one[i];
+                k++;
+                i++;
+            } else {
+                res[k] = two[j];
+                k++;
+                j++;
+                
+                ans += (one.length - i);
+            }
+        }
+        
+        while(i < one.length){
+            res[k] = one[i];
+            k++;
+            i++;
+        }
+        
+        while(j < two.length){
+            res[k] = two[j];
+            k++;
+            j++;            
+        }
+        
+        return res;
+    }
+}
