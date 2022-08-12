@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+  public static void solution(String txt, String pat) {
+    int[] lps = new int[pat.length()];
+    
+    int i = 1;
+    int len = 0;
+    while(i < pat.length()){
+        if(pat.charAt(i) == pat.charAt(len)){
+            lps[i] = len + 1;
+            len++;
+            i++;
+        } else if(len == 0){
+            lps[i] = 0;
+            i++;
+        } else {
+            len = lps[len - 1];
+        }
+    }
+    
+    i = 0;
+    int j = 0;
+    while(i < txt.length()){
+        if(txt.charAt(i) == pat.charAt(j)){
+            i++;
+            j++;
+            
+            if(j == pat.length()){
+                System.out.println(i - j);
+                j = lps[j - 1];
+            }
+        } else if(j == 0){
+            i++;
+        } else {
+            j = lps[j - 1];
+        }
+    }
+  }
+  
+  public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    String s1 = scn.nextLine();
+    String s2 = scn.nextLine();
+		solution(s1, s2);
+	}
+
+}
