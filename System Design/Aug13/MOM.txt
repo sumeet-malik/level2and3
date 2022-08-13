@@ -1,0 +1,18 @@
+-> Design Patterns
+    -> Chain of Responsibility
+    -> Strategy
+    -> Proxy
+    -> Prototype
+
+-> Integer vs int, Integer[] vs int[]
+-> Lambda functions
+-> Access Modifiers
+--------------------------------------------------------
+Notes
+   Observor
+   Decorator
+        
+
+
+
+
