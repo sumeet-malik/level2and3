@@ -1,0 +1,17 @@
+-> Design Patterns
+    -> Observor
+    -> Decorator
+    -> Proxy
+    -> Prototype
+
+-> Integer vs int, Integer[] vs int[]
+-> Lambda functions
+-> Access Modifiers
+--------------------------------------------------------
+Notes
+
+        
+
+
+
+
