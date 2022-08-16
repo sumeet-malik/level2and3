@@ -1,0 +1,22 @@
+public class Solution {
+    /**
+     * @param length: the length of the array
+     * @param updates: update operations
+     * @return: the modified array after all k operations were executed
+     */
+    public int[] getModifiedArray(int length, int[][] updates) {
+        // Write your code here
+        int[] parr = new int[length];
+        for(int[] update: updates){
+            parr[update[0]] += update[2];
+            if(update[1] + 1 < parr.length)
+                parr[update[1] + 1] -= update[2];
+        }
+
+        for(int i = 1; i < parr.length; i++){
+            parr[i] += parr[i - 1];
+        }
+
+        return parr;
+    }
+}
