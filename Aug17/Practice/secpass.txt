@@ -1,0 +1,90 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner scn = new Scanner(System.in);
+		int t = Integer.parseInt(scn.nextLine());
+		
+		while(t-- > 0){
+		    int len = Integer.parseInt(scn.nextLine());
+		    String str = scn.nextLine();
+		    int[] arr = getZ(str);
+		    
+		  //  System.out.println(Arrays.toString(lps));
+		    
+		    HashMap<Integer, Integer> map = new HashMap<>();
+		    for(int val: arr){
+		        if(val == 0){
+		            continue;
+		        }
+		        
+		        for(int v = 1; v <= val; v++)
+		            map.put(v, map.getOrDefault(v, 0) + 1);
+		    }
+		    
+		    int ans = 0;
+		    int freq = 0;
+		    for(int key: map.keySet()){
+		        if(map.get(key) > freq){
+		            ans = key;
+		            freq = map.get(key);
+		        } else if(map.get(key) == freq && key > ans){
+		            ans = key;
+		        }
+		    }
+		    
+		    
+		    if(ans == 0){
+		        ans = len;
+		    }
+		    System.out.println(str.substring(0, ans));
+		}
+	}
+	
+	public static int[] getZ(String str){
+	    int[] arr = new int[str.length()];
+	    
+	    int l = 0;
+	    int r = 0;
+	    int i = 1;
+	    
+	    while(i < arr.length){
+	        if(i > r){
+	            l = i;
+	            r = i;
+	            
+	            while(r < arr.length && str.charAt(r) == str.charAt(r - l)){
+	                r++;
+	            }
+	            
+	            arr[i] = r - l;
+	            r--;
+	        } else {
+	            int k = i - l;
+	            if(arr[k] < r - i + 1){
+	                arr[i] = arr[k];
+	            } else {
+	                l = i;
+    	            
+    	            while(r < arr.length && str.charAt(r) == str.charAt(r - l)){
+    	                r++;
+    	            }
+    	            
+    	            arr[i] = r - l;
+    	            r--;
+	            }
+	        }
+	        i++;
+	    }
+	    
+	    return arr;
+	}
+}

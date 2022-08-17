@@ -1,0 +1,83 @@
+class NumArray {
+    
+    Node root;
+    class Node {
+        int ss;
+        int se;
+        Node left;
+        Node right;
+        
+        int data;
+    }
+    
+    Node construct(int[] nums, int lo, int hi){
+        if(lo == hi){
+            Node node = new Node();
+            node.ss = node.se = lo;
+            node.data = nums[lo];
+            node.left = node.right = null;
+            return node;
+        }
+        
+        Node node = new Node();
+        node.ss = lo;
+        node.se = hi;
+        
+        int mid = (lo + hi) / 2;
+        node.left = construct(nums, lo, mid);
+        node.right = construct(nums, mid + 1, hi);
+        node.data += node.left != null? node.left.data : 0;
+        node.data += node.right != null? node.right.data : 0;
+        
+        return node;
+    }
+
+    public NumArray(int[] nums) {
+        root = construct(nums, 0, nums.length - 1);
+    }
+    
+    void update(Node node, int idx, int val){
+        if(node.ss == node.se){
+            node.data = val;
+            return;
+        }
+        
+        int smid = (node.ss + node.se) / 2;
+        if(idx <= smid){
+            update(node.left, idx, val);
+        } else {
+            update(node.right, idx, val);
+        }
+        
+        node.data = 0;
+        node.data += node.left != null? node.left.data : 0;
+        node.data += node.right != null? node.right.data : 0;
+    }
+    
+    public void update(int index, int val) {
+        update(root, index, val);
+    }
+    
+    int query(Node node, int qs, int qe){
+        if(node == null || node.ss > qe || node.se < qs){
+            return 0;
+        } else if(node.ss >= qs && node.se <= qe){
+            return node.data;
+        } else {
+            int lval = query(node.left, qs, qe);
+            int rval = query(node.right, qs, qe);
+            return lval + rval;
+        }
+    }
+    
+    public int sumRange(int left, int right) {
+        return query(root, left, right);
+    }
+}
+
+/**
+ * Your NumArray object will be instantiated and called as such:
+ * NumArray obj = new NumArray(nums);
+ * obj.update(index,val);
+ * int param_2 = obj.sumRange(left,right);
+ */
