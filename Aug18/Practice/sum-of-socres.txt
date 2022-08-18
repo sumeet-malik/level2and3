@@ -1,0 +1,40 @@
+class Solution {
+    public long sumScores(String s) {
+        long[] z = new long[s.length()];
+        
+        int l = 0;
+        int r = 0;
+        long ans = s.length();
+        for(int i = 1; i < z.length; i++){
+            if(i > r){
+                l = r = i;
+                while(r < z.length && s.charAt(r) == s.charAt(r - l)){
+                    r++;
+                }
+                
+                r--;
+                z[i] = r - l + 1;
+            } else {
+                int k = i - l;
+                
+                if(z[k] < r - i + 1){
+                    z[i] = z[k];
+                } else {
+                    l = i;
+                    while(r < z.length && s.charAt(r) == s.charAt(r - l)){
+                        r++;
+                    }
+
+                    r--;
+                    z[i] = r - l + 1;
+                }
+            }
+            
+            ans += z[i];
+        }
+        
+        System.out.println(Arrays.toString(z));
+        
+        return ans;
+    }
+}
