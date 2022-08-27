@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+    
+    int zero = 1;
+    int one = 1;
+    for(int i = 2; i <= n; i++){
+        int nzero = one;
+        int none = zero + one;
+        
+        one = none;
+        zero = nzero;
+    }
+    
+    System.out.println(one + zero);
+ }
+
+}
