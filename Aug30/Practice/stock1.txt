@@ -1,0 +1,14 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+        int lpsf = prices[0];
+        int maxp = 0;
+        
+        for(int i = 1; i < prices.length; i++){
+            int cp = prices[i] - lpsf;
+            maxp = Math.max(maxp, cp);
+            lpsf = Math.min(lpsf, prices[i]);
+        }
+        
+        return maxp;
+    }
+}
