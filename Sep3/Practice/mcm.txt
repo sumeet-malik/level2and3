@@ -1,0 +1,22 @@
+class Solution{
+    static int matrixMultiplication(int N, int arr[])
+    {
+        // code here
+        int[][] dp = new int[N - 1][N - 1];
+        
+        for(int g = 1; g < dp[0].length; g++){
+            for(int i = 0, j = g; j < dp[0].length; i++, j++){
+                dp[i][j] = Integer.MAX_VALUE;
+                
+                for(int k = 1, m = g; k <= g; k++, m--){
+                    int f1 = dp[i][j - m];
+                    int f2 = dp[i + k][j];
+                    int f3 = arr[i] * arr[j + 1] * arr[i + k];
+                    dp[i][j] = Math.min(dp[i][j], f1 + f2 + f3);
+                }
+            }
+        }
+        
+        return dp[0][N - 2];
+    }
+}
