@@ -1,0 +1,63 @@
+class Solution {
+    class Cell implements Comparable<Cell> {
+        int i; 
+        int j;
+        int ht;
+        
+        Cell(int i, int j, int ht){
+            this.i = i;
+            this.j = j;
+            this.ht = ht;
+        }
+        
+        public int compareTo(Cell o){
+            return this.ht - o.ht;
+        }
+    }
+    
+    public int trapRainWater(int[][] heightMap) {
+        int m = heightMap.length;
+        int n = heightMap[0].length;
+        
+        if(m <= 2 || n <= 2){
+            return 0;
+        }
+        
+        PriorityQueue<Cell> pq = new PriorityQueue<>();
+        boolean[][] vis = new boolean[m][n];
+        
+        for(int i = 0; i < m; i++){
+            pq.add(new Cell(i, 0, heightMap[i][0]));
+            pq.add(new Cell(i, n - 1, heightMap[i][n - 1]));
+            vis[i][0] = true;
+            vis[i][n - 1] = true;
+        }
+        
+        for(int j = 1; j < n - 1; j++){
+            pq.add(new Cell(0, j, heightMap[0][j]));
+            pq.add(new Cell(m - 1, j, heightMap[m - 1][j]));
+            vis[0][j] = true;
+            vis[m - 1][j] = true;
+        }
+        
+        int res = 0;
+        int[][] dirs = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        while(pq.size() > 0){
+            Cell rem = pq.remove();
+            for(int[] dir: dirs){
+                int ii = rem.i + dir[0];
+                int jj = rem.j + dir[1];
+                if(ii < 0 || ii >= m || jj < 0 || jj >= n || vis[ii][jj]){
+                    continue;
+                }
+                
+                res += Math.max(0, rem.ht - heightMap[ii][jj]);
+                
+                vis[ii][jj] = true;
+                pq.add(new Cell(ii, jj, Math.max(rem.ht, heightMap[ii][jj])));
+            }
+        }
+        
+        return res;
+    }
+}
