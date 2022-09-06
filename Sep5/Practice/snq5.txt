@@ -1,0 +1,33 @@
+class Solution {
+    public String removeDuplicateLetters(String s) {
+        char[] arr = s.toCharArray();
+        int[] rem = new int[26];
+        for(char ch: arr){
+            rem[ch - 'a']++;
+        }
+        
+        boolean[] existInStack = new boolean[26];
+        Stack<Character> st = new Stack<>();
+        for(char ch: arr){
+            rem[ch - 'a']--;
+            
+            if(!existInStack[ch - 'a']){
+                while(st.size() > 0 && st.peek() > ch && rem[st.peek() - 'a'] > 0){
+                    existInStack[st.peek() - 'a'] = false;
+                    st.pop();
+                }
+                
+                existInStack[ch - 'a'] = true;
+                st.push(ch);
+            }
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        while(st.size() > 0){
+            sb.append(st.peek());
+            st.pop();
+        }
+        
+        return sb.reverse().toString();
+    }
+}
