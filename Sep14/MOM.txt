@@ -1,0 +1,115 @@
+Trees
+    https://www.spoj.com/problems/FENTREE/
+    https://leetcode.com/problems/kth-ancestor-of-a-tree-node/
+    https://codeforces.com/gym/304970/problem/A
+    https://codeforces.com/contest/1534/problem/D
+    https://www.geeksforgeeks.org/in-place-conversion-of-sorted-dll-to-balanced-bst/
+    https://www.geeksforgeeks.org/merge-two-balanced-binary-search-trees/
+    leetcode 1932 = https://leetcode.com/problems/merge-bsts-to-create-single-bst/
+    https://leetcode.com/problems/binary-search-tree-iterator-ii/
+    https://www.lintcode.com/problem/921/
+    https://www.geeksforgeeks.org/check-if-value-exists-in-level-order-sorted-complete-binary-tree/
+    https://binarysearch.com/problems/Longest-Even-Sum-Path
+
+Graphs
+    https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/
+    https://practice.geeksforgeeks.org/problems/maximum-bipartite-matching/1
+    https://codeforces.com/contest/1541/problem/C
+    https://www.geeksforgeeks.org/shortest-cycle-in-an-undirected-unweighted-graph/
+    https://leetcode.com/problems/shortest-distance-from-all-buildings/   
+    https://leetcode.com/problems/maximum-profit-in-job-scheduling/
+
+AnS + SnS
+    AnS = https://leetcode.com/problems/trapping-rain-water-ii/
+    https://leetcode.com/problems/rank-transform-of-a-matrix/
+    Segmented Sieve - https://www.spoj.com/problems/PRIME1/cstart=10
+    https://leetcode.com/problems/wiggle-sort-ii/
+    https://leetcode.com/problems/longest-duplicate-substring/
+    https://codeforces.com/problemset/problem/1520/F1
+    https://drive.google.com/file/d/15sYctNOvqfsI9W8fX_FjX8Oag1tJ5ZRy/view?usp=drivesdk
+    Quick Select -  https://leetcode.com/problems/kth-largest-element-in-an-array/
+                    https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/866686/java-median-of-medians-solution-beats-99-with-comments-to-explain-the-algorithm
+                    https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/discuss/85170/O(n)-from-paper.-Yes-O(rows
+
+Sep12
+    DP1 = https://leetcode.com/problems/edit-distance/ (HW)
+    DP2 = https://leetcode.com/problems/frog-jump/
+    DP3 = https://www.geeksforgeeks.org/wildcard-pattern-matching/  
+    DP5 = https://www.geeksforgeeks.org/longest-repeating-subsequence/ 
+    DP4 = https://leetcode.com/problems/knight-probability-in-chessboard
+    
+    SnQ1 = Adapters
+    Trie1 = https://leetcode.com/problems/implement-trie-prefix-tree/
+    DP6 = https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/
+
+    
+    Trie2 = https://leetcode.com/problems/design-add-and-search-words-data-structure/
+    Trie3 = https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+    SnQ2 = https://www.geeksforgeeks.org/efficiently-implement-k-stacks-single-array/
+    SnQ3 = https://www.geeksforgeeks.org/efficiently-implement-k-queues-single-array/
+
+    DP = https://leetcode.com/problems/longest-subsequence-repeated-k-times/
+    DP = https://leetcode.com/problems/ones-and-zeroes/
+    DP = Job Scheduling LC 1235, Highway Billboard
+    DP = https://www.lintcode.com/problem/725/
+    DP = https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/
+    DP = https://www.geeksforgeeks.org/optimal-strategy-for-a-game-dp-31/
+    DP = https://leetcode.com/problems/regular-expression-matching/
+    DP = https://leetcode.com/problems/number-of-digit-one/
+    DP = https://codeforces.com/problemset/problem/1036/C
+    DP = https://www.codechef.com/problems/AOPN
+    DP = https://codeforces.com/gym/100886/problem/G
+    DP = https://leetcode.com/problems/jump-game-ii/
+    DP = https://leetcode.com/problems/scramble-string/
+    DP = https://www.geeksforgeeks.org/word-break-problem-dp-32/
+    DP = https://www.geeksforgeeks.org/shortest-common-supersequence/
+    DP = https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
+    DP = https://www.geeksforgeeks.org/friends-pairing-problem/
+    DP = https://leetcode.com/problems/remove-boxes/
+    DP = https://leetcode.com/problems/dungeon-game/
+    DP = https://leetcode.com/problems/cherry-pickup/
+    DP = https://leetcode.com/problems/cherry-pickup-ii/
+        
+    Doubts
+        Super Ugly = nlogk
+        LBS (nlogn)?
+        Binary Search = 2way, 3 way, upper bound, lower bound
+        Permutation without duplicacy (Coin Change)
+        Min-Palin-Cut => N3 to N2 Why?
+        Buy-Sell Single DP
+
+        
+
+        
+    
+    
+
+    
+
+    
+
+
+
+    
+    
+    
+
+    
+
+    
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
