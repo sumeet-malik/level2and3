@@ -1,0 +1,32 @@
+class Compute {
+    
+    public long maxSumWithK(long a[], long n, long k)
+    {
+        long[] res = new long[a.length];
+        res[0] = a[0];
+        long csum = a[0];
+        
+        for(int i = 1; i < a.length; i++){
+            if(csum < 0){
+                csum = a[i];
+            } else {
+                csum = csum + a[i];
+            }
+            
+            res[i] = csum;
+        }
+        
+        long win = 0;
+        for(int i = 0; i < (int)k; i++){
+            win += a[i];
+        }
+        
+        long ans = win;
+        for(int i = (int)k; i < a.length; i++){
+            win += a[i] - a[i - (int)k];
+            ans = Math.max(ans, Math.max(win, res[i - (int)k] + win));
+        }
+        
+        return ans;
+    }
+}

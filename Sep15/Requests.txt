@@ -1,0 +1,37 @@
+Requests
+    leetcode 1723 = https://leetcode.com/problems/find-minimum-time-to-finish-all-jobs/
+    leetcode 797 = https://leetcode.com/problems/all-paths-from-source-to-target/
+    Leetcode 630 = https://leetcode.com/discuss/interview-question/2147676/sorting-the-tree
+    https://www.codingninjas.com/codestudio/guided-paths/data-structures-algorithms/content/118511/offering/1381552
+    https://leetcode.com/problemset/concurrency/
+    https://www.lintcode.com/problem/804/description
+
+    https://leetcode.com/problems/pacific-atlantic-water-flow/
+    https://www.lintcode.com/problem/178/
+    https://leetcode.com/problems/escape-the-spreading-fire/
+    https://leetcode.com/problems/parallel-courses-ii/
+    https://leetcode.com/contest/weekly-contest-299/problems/minimum-score-after-removals-on-a-tree/
+    
+    https://practice.geeksforgeeks.org/contest/job-a-thon-10-hiring-challenge/problems/
+    https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/
+
+    https://binarysearch.com/problems/Minimum-Spanning-Tree
+    https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/
+    https://workat.tech/machine-coding/editorial/how-to-design-splitwise-machine-coding-ayvnfo1tfst6
+    https://leetcode.com/problems/minimum-height-trees 
+    LC 2338 - https://leetcode.com/problems/count-the-number-of-ideal-arrays/
+    https://www.chegg.com/homework-help/questions-and-answers/want-code-java-script-nodejs-164-don-t-modify-solution-q97339731
+
+    https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1
+    https://leetcode.com/problems/removing-minimum-number-of-magic-beans/
+    https://leetcode.com/problems/maximum-score-of-spliced-array/
+    https://leetcode.com/problems/next-closest-time/
+    https://leetcode.com/problems/word-search-ii/
+    https://leetcode.com/problems/count-of-range-sum/
+    https://leetcode.com/problems/range-frequency-queries/
+
+    https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
+    https://leetcode.com/problems/sum-of-total-strength-of-wizards/
+    https://leetcode.com/problems/paint-house-iii/
+    https://leetcode.com/problems/race-car/
+    https://leetcode.com/problems/decode-string/
