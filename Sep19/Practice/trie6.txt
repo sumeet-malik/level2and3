@@ -1,0 +1,61 @@
+class MapSum {
+    class Node {
+        Node[] children = new Node[26];
+        int val = 0;
+        boolean eow = false;
+    }
+    
+    Node root;
+    public MapSum() {
+        root = new Node();
+    }
+    
+    public void insert(String key, int val) {
+        Node temp = root;
+        for(char ch: key.toCharArray()){
+            if(temp.children[ch - 'a'] == null){
+               temp.children[ch - 'a'] = new Node();
+            }
+            temp = temp.children[ch - 'a'];
+        }
+        
+        temp.val = val;
+        temp.eow = true;
+    }
+    
+    public int sum(String prefix) {
+        Node temp = root;
+        for(char ch: prefix.toCharArray()){
+            if(temp.children[ch - 'a'] == null){
+               return 0;
+            } else {
+                temp = temp.children[ch - 'a'];
+            }
+        }
+        
+        return helper(temp);
+    }
+    
+    int helper(Node node){
+        int ans = 0;
+        
+        if(node.eow){
+            ans += node.val;
+        }
+        
+        for(char ch = 'a'; ch <= 'z'; ch++){
+            if(node.children[ch - 'a'] != null){
+                ans += helper(node.children[ch - 'a']);
+            }
+        }
+        
+        return ans;
+    }
+}
+
+/**
+ * Your MapSum object will be instantiated and called as such:
+ * MapSum obj = new MapSum();
+ * obj.insert(key,val);
+ * int param_2 = obj.sum(prefix);
+ */
