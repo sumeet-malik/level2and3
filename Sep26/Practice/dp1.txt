@@ -1,0 +1,25 @@
+class Solution {
+    public int countDigitOne(int n) {
+        int res = 0;
+        
+        int place = 1;
+        while(place <= n){
+            int q = n / (10 * place);
+            int r = n % (10 * place);
+            
+            int delta = 0;
+            if(r < place){
+                delta = 0;
+            } else if(r < 2 * place){
+                delta = r - place + 1;
+            } else {
+                delta = place;
+            }
+            
+            res += q * place + delta;
+            place = place * 10;
+        }
+        
+        return res;
+    }
+}
