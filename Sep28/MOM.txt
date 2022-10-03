@@ -30,26 +30,40 @@ AnS + SnS
                     https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/866686/java-median-of-medians-solution-beats-99-with-comments-to-explain-the-algorithm
                     https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/discuss/85170/O(n)-from-paper.-Yes-O(rows
 
-Sep21  
-    DP1 = https://leetcode.com/problems/dungeon-game/
-    DP2 = https://leetcode.com/problems/cherry-pickup-ii/
-    DP3 = https://leetcode.com/problems/cherry-pickup/
-    DP4 = https://leetcode.com/problems/scramble-string/
-    dp5 -> Egg drop Binary search
-
+DP 
+    Egg drop Binary search
     DP = https://www.lintcode.com/problem/725/
     DP = Job Scheduling LC 1235, Highway Billboard
     DP = https://codeforces.com/problemset/problem/1036/C
     DP = https://www.codechef.com/problems/AOPN
     DP = https://codeforces.com/gym/100886/problem/G
+
+    Super Ugly = nlogk
+    LBS (nlogn)?
+    Binary Search = 2way, 3 way, upper bound, lower bound
+    Permutation without duplicacy (Coin Change)
+    Min-Palin-Cut => N3 to N2 Why?
+    Buy-Sell Single DP
+
+Sep30
+    LL1 = https://leetcode.com/problems/reverse-linked-list/
+    LL2 = https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/
+    LL3 = https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/
+    LL4 = https://www.geeksforgeeks.org/split-a-circular-linked-list-into-two-halves/
+    LL5 = https://www.geeksforgeeks.org/write-a-function-to-get-the-intersection-point-of-two-linked-lists/
+    LL6 = https://leetcode.com/problems/lru-cache/
+    LL7 = https://leetcode.com/problems/lfu-cache/
+    
+    LL = https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/
+    LL = https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/linked-list/fold-of-linkedlist/ojquestion
+    LL = https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/linked-list/unfold-of-linkedlist/ojquestion
+    LL = https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/linked-list/segregate-even-and-odd-nodes-in-a-link-list/ojquestion
+    LL = https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/linked-list/add-two-linkedlist/ojquestion
+    LL = https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/linked-list/subtract-two-linkedlist/ojquestion
+    LL = https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/linked-list/quicksort-in-linkedlist/ojquestion
+
         
-    Doubts
-        Super Ugly = nlogk
-        LBS (nlogn)?
-        Binary Search = 2way, 3 way, upper bound, lower bound
-        Permutation without duplicacy (Coin Change)
-        Min-Palin-Cut => N3 to N2 Why?
-        Buy-Sell Single DP
+
 
         
 
