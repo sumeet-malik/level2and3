@@ -1,0 +1,35 @@
+class Solution {
+    public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
+        int[][] arr = new int[startTime.length][3];
+        for(int i = 0; i < arr.length; i++){
+            arr[i][0] = startTime[i];
+            arr[i][1] = endTime[i];
+            arr[i][2] = profit[i];
+        }
+        
+        Arrays.sort(arr, (b1, b2) -> {
+	        return b1[1] - b2[1];
+	    });
+	    
+	    int[] dp = new int[arr.length];
+	    dp[0] = arr[0][2];
+	    
+	    for(int i = 1; i < arr.length; i++){
+	        int exc = 0 + dp[i - 1];
+            int inc = arr[i][2];
+            
+            for(int j = i - 1; j >= 0; j--){
+                if(arr[j][1] <= arr[i][0]){
+                    inc += dp[j];
+                    break;
+                }
+            }
+            
+            dp[i] = Math.max(inc, exc);
+	    }
+	    
+	    return dp[dp.length - 1];
+    }
+    
+
+}
