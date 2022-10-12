@@ -1,0 +1,37 @@
+public class Solution {
+    /**
+     * @param root: the given tree
+     * @return: the number of uni-value subtrees.
+     */
+    public int countUnivalSubtrees(TreeNode root) {
+        // write your code here
+        count = 0;
+        isUniVal(root);
+        return count;
+    }
+
+    int count = 0;
+    boolean isUniVal(TreeNode node){
+        boolean res = false;
+
+        if(node.left != null && node.right != null){
+            boolean lres = isUnival(node.left);
+            boolean rres = isUnival(node.right);
+            res = lres && rres && node.val == node.left.val && node.val == node.right.val;
+        } else if(node.left != null){
+            boolean lres = isUnival(node.left);
+            res = lres && node.val == node.left.val;
+        } else if(node.right != null){
+            boolean rres = isUnival(node.right);
+            res = rres && node.val == node.right.val;
+        } else {
+            res = true;
+        }
+
+        if(res){
+            count++;
+        }
+
+        return res;
+    }
+}

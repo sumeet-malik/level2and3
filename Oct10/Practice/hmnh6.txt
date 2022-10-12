@@ -1,0 +1,33 @@
+class Solution
+{
+    public static long countKdivPairs(int arr[], int n, int k)
+    {
+        //code here
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int val: arr){
+            int rem = val % k;
+            if(rem < 0){
+                rem += k;
+            }
+            
+            map.put(rem, map.getOrDefault(rem, 0) + 1);
+        }
+        
+        long res = 0;
+        
+        res += (map.getOrDefault(0, 0) * (map.getOrDefault(0, 0) - 1) / 2);
+        int left = 1;
+        int right = k - 1;
+        while(left < right){
+            res += map.getOrDefault(left, 0) * map.getOrDefault(right, 0);
+            left++;
+            right--;
+        }
+        
+        if(k % 2 == 0){
+            res += map.getOrDefault(k / 2, 0) * (map.getOrDefault(k / 2, 0) - 1) / 2;
+        }
+        
+        return res;
+    }
+}
