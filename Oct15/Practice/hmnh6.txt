@@ -1,0 +1,24 @@
+class Sol
+{
+    int isPossible (String S)
+    {
+        // your code here
+        int[] map = new int[26];
+        for(char ch: S.toCharArray()){
+            map[ch - 'a']++;
+        }
+        
+        int count = 0;
+        for(int val: map){
+            if(val % 2 == 1){
+                count++;
+            }
+        }
+        
+        if(count == 0 || count == 1){
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}
