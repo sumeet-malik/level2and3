@@ -1,0 +1,25 @@
+class Solution {
+    boolean areKAnagrams(String s1, String s2, int k) {
+        // code here
+        if(s1.length() != s2.length()){
+            return false;
+        }
+        
+        int[] map = new int[26];
+        for(int i = 0; i < s1.length(); i++){
+            char ch1 = s1.charAt(i);
+            char ch2 = s2.charAt(i);
+            map[ch1 - 'a']++;
+            map[ch2 - 'a']--;
+        }
+        
+        int count = 0;
+        for(int val: map){
+            if(val >= 0){
+                count += val;
+            }
+        }
+        
+        return count <= k;
+    }
+}
