@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+  public static void main(String[] args){
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+    int[] arr = new int[n];
+    for(int i = 0 ; i < n; i++){
+      arr[i] = scn.nextInt();
+    }
+    solution(arr);
+  }
+
+  public static void solution(int[] arr){
+   //write your code here
+   int m3x = -1;
+   int m3xp1 = 0;
+   int m3xp2 = 0;
+   
+   for(int val: arr){
+       int cw3x = val & m3x;
+       int cw3xp1 = val & m3xp1;
+       int cw3xp2 = val & m3xp2;
+       
+       m3x = m3x & ~cw3x;
+       m3xp1 = m3xp1 | cw3x;
+       
+       m3xp1 = m3xp1 & ~cw3xp1;
+       m3xp2 = m3xp2 | cw3xp1;
+       
+       m3xp2 = m3xp2 & ~cw3xp2;
+       m3x = m3x | cw3xp2;
+   }
+   
+   System.out.println(m3xp1);
+  }
+
+}
