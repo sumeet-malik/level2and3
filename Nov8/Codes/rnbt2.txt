@@ -1,0 +1,126 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+  public static void solution(char[][] arr, String[] words, int vidx) {
+      if(vidx == words.length){
+          print(arr);
+          return;
+      }
+    //write your code here
+    String word = words[vidx];
+    for(int i = 0; i < arr.length; i++){
+        for(int j = 0; j < arr[i].length; j++){
+            if(arr[i][j] == '-' || arr[i][j] == word.charAt(0)){
+                if(canPlaceWordHori(arr, i, j, word) == true){
+                    boolean[] res = placeWordHori(arr, i, j, word);
+                    solution(arr, words, vidx + 1);
+                    unplaceWordHori(arr, i, j, res);
+                }
+                
+                if(canPlaceWordVert(arr, i, j, word) == true){
+                    boolean[] res = placeWordVert(arr, i, j, word);
+                    solution(arr, words, vidx + 1);
+                    unplaceWordVert(arr, i, j, res);
+                }
+            }
+        }
+    }
+  }
+  
+  static void unplaceWordHori(char[][] arr, int i, int j, boolean[] res){
+      for(int k = 0; k < res.length; k++){
+          if(res[k] == true){
+              arr[i][j + k] = '-';
+          } 
+      }
+  }
+  
+  static void unplaceWordVert(char[][] arr, int i, int j, boolean[] res){
+      for(int k = 0; k < res.length; k++){
+          if(res[k] == true){
+              arr[i + k][j] = '-';
+          } 
+      }
+  }
+  
+  static boolean[] placeWordHori(char[][] arr, int i, int j, String word){
+      boolean[] res = new boolean[word.length()];
+      
+      for(int k = 0; k < word.length(); k++){
+          char ch = word.charAt(k);
+          if(arr[i][j + k] == '-'){
+              arr[i][j + k] = ch;
+              res[k] = true;
+          } 
+      }
+      
+      return res;
+  }
+  
+  static boolean[] placeWordVert(char[][] arr, int i, int j, String word){
+      boolean[] res = new boolean[word.length()];
+      
+      for(int k = 0; k < word.length(); k++){
+          char ch = word.charAt(k);
+          if(arr[i + k][j] == '-'){
+              arr[i + k][j] = ch;
+              res[k] = true;
+          } 
+      }
+      
+      return res;
+  }
+  
+  static boolean canPlaceWordHori(char[][] arr, int i, int j, String word){
+      for(int k = 0; k < word.length(); k++){
+          char ch = word.charAt(k);
+          if(j + k < arr[0].length && (arr[i][j + k] == '-' || arr[i][j + k] == ch)){
+              continue;
+          } else {
+              return false;
+          }
+      }
+      
+      return true;
+  }
+  
+  static boolean canPlaceWordVert(char[][] arr, int i, int j, String word){
+      for(int k = 0; k < word.length(); k++){
+          char ch = word.charAt(k);
+          if(i + k < arr.length && (arr[i + k][j] == '-' || arr[i + k][j] == ch)){
+              continue;
+          } else {
+              return false;
+          }
+      }
+      
+      return true;
+  }
+
+
+  public static void print(char[][] arr) {
+    for (int i = 0 ; i < arr.length; i++) {
+      for (int j = 0 ; j < arr.length; j++) {
+        System.out.print(arr[i][j]);
+      }
+      System.out.println();
+    }
+
+  }
+  public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    char[][] arr = new char[10][10];
+    for (int i = 0 ; i < arr.length; i++) {
+      String str = scn.next();
+      arr[i] = str.toCharArray();
+    }
+    int n = scn.nextInt();
+    String[] words = new String[n];
+    for (int i = 0 ; i  < words.length; i++) {
+      words[i] = scn.next();
+    }
+    solution(arr, words, 0);
+  }
+}

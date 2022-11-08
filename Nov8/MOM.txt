@@ -1,0 +1,90 @@
+DP 
+    Super Ugly = nlogk
+    Buy-Sell Single DP  
+    Min-Palin-Cut => N3 to N2 Why?
+    Permutation without duplicacy (Coin Change)
+    nlogn = Job Scheduling LC 1235, Highway Billboard, LBS
+    https://www.codechef.com/problems/AOPN  
+    https://codeforces.com/gym/100886/problem/G
+    https://codeforces.com/problemset/problem/1036/C
+
+AnS + SnS
+    https://leetcode.com/problems/trapping-rain-water-ii/
+    https://leetcode.com/problems/rank-transform-of-a-matrix/
+    https://leetcode.com/problems/wiggle-sort-ii/
+    https://leetcode.com/problems/longest-duplicate-substring/
+    https://codeforces.com/problemset/problem/1520/F1
+    Segmented Sieve - https://www.spoj.com/problems/PRIME1/cstart=10
+    Quick Select -  https://leetcode.com/problems/kth-largest-element-in-an-array/
+                    https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/866686/java-median-of-medians-solution-beats-99-with-comments-to-explain-the-algorithm
+                    https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/discuss/85170/O(n)-from-paper.-Yes-O(rows 
+    Binary Search = 2way, 3way, upper bound, lower bound
+
+Graphs
+    https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/
+    https://leetcode.com/problems/shortest-distance-from-all-buildings/   
+    https://www.geeksforgeeks.org/shortest-cycle-in-an-undirected-unweighted-graph/
+    https://practice.geeksforgeeks.org/problems/maximum-bipartite-matching/1
+    https://codeforces.com/contest/1541/problem/C
+
+Trees
+    https://www.geeksforgeeks.org/check-if-value-exists-in-level-order-sorted-complete-binary-tree/
+    https://www.geeksforgeeks.org/in-place-conversion-of-sorted-dll-to-balanced-bst/
+    https://www.geeksforgeeks.org/merge-two-balanced-binary-search-trees/
+    https://leetcode.com/problems/merge-bsts-to-create-single-bst/
+    https://codeforces.com/gym/304970/problem/A
+    https://codeforces.com/contest/1534/problem/D
+    https://leetcode.com/problems/binary-search-tree-iterator-ii/
+    
+HashMap and Heaps
+    https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
+    https://leetcode.com/problems/sliding-window-median/
+    https://leetcode.com/problems/the-skyline-problem/
+    https://www.codechef.com/LTIME87B/problems/MODEFREQ/ (mode of frequencies)
+    https://codeforces.com/contest/1549/problem/C (web of lies)
+    https://codeforces.com/contest/1526/problem/C2 (potions)
+    https://codeforces.com/contest/1520/problem/D (same differences)
+
+Nov1
+    RnBT1 = https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/josephus-problem-official/ojquestion
+    RnBT2 = https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/crossword-puzzle-official/ojquestion
+    RnBT3 = https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/cryptarithmetic-official/ojquestion
+    RnBT4 = https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/lexicographical-numbers-official/ojquestion
+    RnBT5 = https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/friends-pairing-2-official/ojquestion
+    RnBT6(hw) = https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/k-partitions-official/ojquestion
+
+    
+    
+        
+    
+    
+
+    
+
+    
+
+
+
+    
+    
+    
+
+    
+
+    
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
