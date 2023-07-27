@@ -14,6 +14,7 @@ public class Fib {
 //		int fn = fibm(n, strg);
 		int fn = fibt(n);
 		System.out.println(fn);
+		scn.close();
 	}
 	
 	public static int fib(int n) {
